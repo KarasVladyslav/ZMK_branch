@@ -56,10 +56,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-  &kp TAB    &trans    &kp UP     &trans       &trans   &trans     &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS    &kp DEL
-&kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT  &screenshot   &trans     &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp SLASH
-&kp LSHFT    &trans    &trans     &trans       &trans   &trans     &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY     &trans
-                                &kp LGUI       &trans  &kp RET  &kp SPACE  &kp NUMBER_0      &kp RALT
+  &kp TAB    &trans    &kp UP     &trans        &trans   &trans     &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS    &kp DEL
+&kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT   &screenshot   &trans     &trans   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp SLASH
+&kp LSHFT    &trans    &trans     &trans        &trans   &trans     &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY     &trans
+                                  &trans  &kp LEFT_GUI  &kp RET  &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
 
