@@ -6,9 +6,9 @@
 
 //Layers 
 #define Base 0
-#define Lower 2
-#define Raise 3
-#define BT 4
+#define Lower 1
+#define Raise 2
+#define BT 3
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
