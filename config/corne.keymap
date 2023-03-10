@@ -12,7 +12,7 @@
 
 // #define block
 
-#define SCSH &kp LS(LG(NUMBER_4))
+// #define SCSH &kp LS(LG(NUMBER_4))
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -62,7 +62,7 @@
             bindings = <
   &kp ESC    &trans    &trans     &kp UP        &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
 &kp LCTRL    &trans    &kp LEFT   &kp DOWN      &kp RIGHT      &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
-&kp LSHFT    &trans    &trans     &trans        SCSH        &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
+&kp LSHFT    &trans    &trans     &trans        &kp LS(LG(NUMBER_4))        &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
                                   &trans  &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
