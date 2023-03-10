@@ -60,10 +60,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-  &kp ESC    &trans    &trans     &kp UP        &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
-&kp LCTRL    &trans    &kp LEFT   &kp DOWN      &kp RIGHT      &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
-&kp LSHFT    &trans    &trans     &trans        &kp LS(LG(NUMBER_4))        &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
-                                  &trans  &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
+  &kp ESC    &trans    &trans     &kp UP        &trans               &trans  &kp APOSTROPHE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
+&kp LCTRL    &trans    &kp LEFT   &kp DOWN      &kp RIGHT            &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
+&kp LSHFT    &trans    &trans     &trans        &kp LS(LG(NUMBER_4)) &trans  &trans              &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY &trans
+                                  &trans        &kp LEFT_GUI         &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
 
@@ -80,10 +80,10 @@
         Funct_layer {
             label = "Funct";
             bindings = <
-&bootloader        &trans        &trans        &trans        &trans        &trans  &trans  &kp LA(LC(U))  &kp LA(LC(I))  &trans  &trans  &trans
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp LA(LC(J))  &kp LA(LC(K))  &trans  &trans  &kp LA(LC(RETURN))
-     &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp LA(LC(LEFT))  &kp LA(LC(RIGHT))  &trans   &trans  &trans
-                                               &trans        &trans        &trans  &trans  &trans  &trans
+&bootloader  &trans        &trans        &trans        &trans        &trans           &trans  &kp LA(LC(U))  &kp LA(LC(I))  &trans  &trans  &trans 
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans  &kp LA(LC(J))  &kp LA(LC(K))  &trans  &trans  &kp LA(LC(RETURN))
+     &trans  &trans        &trans        &trans        &trans        &trans           &trans  &kp LA(LC(LEFT))  &kp LA(LC(RIGHT))  &trans   &trans  &trans
+                                               &trans        &trans        &trans     &trans  &trans  &trans
             >;
         };
     };
