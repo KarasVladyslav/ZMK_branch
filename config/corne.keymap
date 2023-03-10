@@ -8,11 +8,20 @@
 #define Base 0
 #define Lower 1
 #define Raise 2
-#define BT 3
+#define Funct 3
 
-// #define block
+// screenshot shorts
 
-#define SCSH &kp LS(LG(NUMBER_4))
+#define SCSH &kp LS(LG(NUMBER_4)) //screenshot to clipboard
+
+// Magnet shorts
+#define MAGlft &kp LC(LA(LEFT)) //Left half
+#define MAGrght &kp LC(LA(RIGHT)) //Right half
+#define MAGtl &kp LC(LA(U)) //Top Left
+#define MAGtr &kp LC(LA(I)) //Top right
+#define MAGbl &kp LC(LA(J)) //Bottom left
+#define MAGbr &kp LC(LA(K)) //Bottom right
+#define MAGmax  &kp LC(LA(RETURN)) //Maximise
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -28,21 +37,7 @@
         };
     };
 
-    macros {
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp LSHFT &kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp LSHFT &kp NUMBER_4>;
-        };
-    };
 
-    macros {
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -61,8 +56,8 @@
             label = "Lower";
             bindings = <
   &kp ESC    &trans    &kp UP     &trans        &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
-&kp LCTRL  &kp LEFT  &kp DOWN  &kp RIGHT   &screenshot         &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
-&kp LSHFT    &trans    &trans     &trans        SCSH        &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
+&kp LCTRL    &trans    &kp LEFT  &kp DOWN     &kp RIGHT       &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
+&kp LSHFT    &trans    &trans     &trans        SCSH       &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
                                   &trans  &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
@@ -78,11 +73,11 @@
         };
 
         BT_layer {
-            label = "BT";
+            label = "Funct";
             bindings = <
-&bootloader        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
-     &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader        &trans        &trans        &trans        &trans        &trans  &trans  MAGtl   MAGtr  &trans  &trans  &trans
+ &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  MAGbl   MAGbr  &trans  &trans  MAGmax
+     &trans        &trans        &trans        &trans        &trans        &trans  &trans  MAGlft  MAGrght  &trans  &trans  &trans
                                                &trans        &trans        &trans  &trans  &trans  &trans
             >;
         };
