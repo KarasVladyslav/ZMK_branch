@@ -20,7 +20,7 @@
 
 / {
     behaviors {
-        tdA2: tap_dance_RALT_2 {
+        tdA2: tap_dance_RALT_2 { // Tap: Right Alt; TapTap: Raise Layer [2]
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_RALT_2";
             #binding-cells = <0>;
@@ -28,7 +28,7 @@
             bindings = <&kp RIGHT_ALT>, <&mo 2>;
             };
 
-        tdg1: tap_dance_1 {
+        tdg1: tap_dance_1 { // Tap: Left GUI; TapTap: Lower Layer [1]
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
