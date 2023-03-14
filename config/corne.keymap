@@ -28,12 +28,12 @@
             bindings = <&mo 2>, <&kp RIGHT_ALT>;
             };
 
-        tdg1: tap_dance_1 { // Tap: Left GUI; TapTap: Lower Layer [1]
+        tdg1: tap_dance_1 { // Tap: Left GUI; TapTap: ALT
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LEFT_GUI>, <&mo 1>;
+            bindings = <&kp LEFT_GUI>, <&kp LALT>;
             };
     };
     combos {
