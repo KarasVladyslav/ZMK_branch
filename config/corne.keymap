@@ -33,7 +33,7 @@
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LEFT_GUI>, <&kp LALT>;
+            bindings = <&kp LEFT_GUI>, <&mo 3>;
             };
     };
     combos {
