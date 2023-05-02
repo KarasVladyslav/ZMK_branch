@@ -84,30 +84,30 @@
         default_layer {
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W  &kp E  &kp R          &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp GRAVE
+ &kp TAB  &kp Q  &kp W  &kp E  &kp R          &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp GRAVE
 &kp LALT  &kp A  &kp S  &kp D  &kp F          &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMI  &kp ENTER
-     &td2  &kp Z  &kp X  &kp C  &kp V          &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH       &td3
-                         &mo 1  &tdg1  &kp BACKSPACE  &kp SPACE  &tdA2  &kp RCTRL
+    &td2  &kp Z  &kp X  &kp C  &kp V          &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH       &td3
+                        &mo 1  &tdg1  &kp BACKSPACE  &kp SPACE  &tdA2  &kp RCTRL
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-  &kp ESC  &trans    &trans                    &kp UP                &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
-&kp LCTRL  &trans  &kp LEFT                  &kp DOWN             &kp RIGHT         &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
-&kp LSHFT  &trans    &trans  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))         &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
-                                               &trans          &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
+  &kp ESC                &trans    &trans                    &kp UP                &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
+&kp LCTRL  &kp LC(LG(NUMBER_2))  &kp LEFT                  &kp DOWN             &kp RIGHT         &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
+&kp LSHFT                &trans    &trans  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))         &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
+                                                             &trans          &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-  &kp ESC      &kp EXCL   &kp AT       &kp HASH       &kp DLLR  &kp PRCNT  &kp CARET       &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp BSPC
-&kp LCTRL      &ae        &kp RA(S)    &oe            &ue       &kp LS(LA(NUMBER_2))  &kp MINUS      &kp EQUAL         &kp BSLH  &kp LBKT  &kp RBKT  &kp RETURN
-&kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)   &trans  &kp UNDER       &kp PLUS         &kp PIPE  &kp LBRC  &kp RBRC   &kp TILDE
-                                              &trans   &kp LEFT_GUI  &kp LG(BACKSPACE)  &kp SPACE  &kp RIGHT_ALT           &trans
+  &kp ESC      &kp EXCL        &kp AT       &kp HASH       &kp DLLR             &kp PRCNT  &kp CARET       &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp BSPC
+&kp LCTRL           &ae     &kp RA(S)            &oe            &ue  &kp LS(LA(NUMBER_2))  &kp MINUS      &kp EQUAL         &kp BSLH  &kp LBKT  &kp RBKT  &kp RETURN
+&kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)                &trans  &kp UNDER       &kp PLUS         &kp PIPE  &kp LBRC  &kp RBRC   &kp TILDE
+                                              &trans   &kp LEFT_GUI     &kp LG(BACKSPACE)  &kp SPACE  &kp RIGHT_ALT           &trans
             >;
         };
 
