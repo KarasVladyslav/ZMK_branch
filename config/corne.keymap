@@ -14,8 +14,8 @@
 // #define SCSH &kp LS(LG(NUMBER_4))
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     behaviors {
@@ -86,10 +86,17 @@
         lower_layer {
             label = "Lower";
             bindings = <
+<<<<<<< HEAD
 &kp ESC    &trans             &trans    &kp UP                    &trans                &trans         &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS         &kp DEL
 &kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT  &kp DOWN                  &kp RIGHT             &trans         &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS        &kp RETURN
 &kp LSHFT  &trans             &trans    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans         &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY  &trans
                                         &trans                    &kp LEFT_GUI          &kp BACKSPACE  &kp SPACE          &kp RIGHT_ALT  &kp NUMBER_0
+=======
+  &kp ESC                &trans    &trans                    &kp UP                &trans         &trans     &kp APOSTROPHE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3         &kp PLUS     &kp DEL
+&kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT                  &kp DOWN             &kp RIGHT         &trans  &kp DOUBLE_QUOTES   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6        &kp MINUS  &kp RETURN
+&kp LSHFT                &trans    &trans  &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))         &trans             &trans   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY      &trans
+                                                             &trans          &kp LEFT_GUI  &kp BACKSPACE          &kp SPACE  &kp RIGHT_ALT  &kp NUMBER_0
+>>>>>>> parent of fb6d155 (L2 add RC F1 - disable keeb)
             >;
         };
 
@@ -106,10 +113,17 @@
         Funct_layer {
             label = "Funct";
             bindings = <
+<<<<<<< HEAD
 &kp RC(F1)  &trans        &trans        &trans        &trans        &trans        &trans  &trans            &kp LA(LC(U))  &kp LA(LC(I))  &trans             &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp LA(LC(LEFT))  &kp LA(LC(J))  &kp LA(LC(K))  &kp LA(LC(RIGHT))  &kp LA(LC(RETURN))
 &trans      &trans        &trans        &kp C_VOL_DN  &kp C_VOL_UP  &trans        &trans  &trans            &trans         &trans         &trans             &trans
                                         &trans        &trans        &trans        &trans  &trans            &trans
+=======
+&bootloader        &trans        &trans        &trans        &trans        &trans  &trans            &trans  &kp LA(LC(U))  &kp LA(LC(I))             &trans              &trans
+ &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp LA(LC(LEFT))  &kp LA(LC(J))  &kp LA(LC(K))  &kp LA(LC(RIGHT))  &kp LA(LC(RETURN))
+     &trans        &trans        &trans  &kp C_VOL_DN  &kp C_VOL_UP        &trans  &trans            &trans         &trans         &trans             &trans              &trans
+                                               &trans        &trans        &trans  &trans            &trans         &trans
+>>>>>>> parent of fb6d155 (L2 add RC F1 - disable keeb)
             >;
         };
     };
