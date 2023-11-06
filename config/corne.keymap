@@ -14,8 +14,8 @@
 // #define SCSH &kp LS(LG(NUMBER_4))
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -47,6 +47,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp RIGHT_SHIFT>, <&kp RALT>;
         };
+        mo13: mo13 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MO13";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 3>;
+        };
     };
 
     macros {
@@ -70,16 +76,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        L3 {
+            bindings = <&mo 4>;
+            key-positions = <37 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "Base";
             bindings = <
-&kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T          &kp Y      &kp U  &kp I      &kp O    &kp P     &kp GRAVE
-&kp LALT  &kp A  &kp S  &kp D  &kp F  &kp G          &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&td2      &kp Z  &kp X  &kp C  &kp V  &kp B          &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td3
-                        &mo 1  &tdg1  &kp BACKSPACE  &kp SPACE  &tdA2  &kp RCTRL
+&kp TAB   &kp Q  &kp W  &kp E  &kp R           &kp T                       &kp Y      &kp U  &kp I      &kp O    &kp P     &kp GRAVE
+&kp LALT  &kp A  &kp S  &kp D  &kp F           &kp G                       &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&td2      &kp Z  &kp X  &kp C  &kp V           &kp B                       &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td3
+                        &mo13  &mt LGUI ENTER  &mt LEFT_CONTROL BACKSPACE  &kp SPACE  &mo 2  &mo13
             >;
         };
 
@@ -96,14 +111,14 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&kp ESC    &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT             &kp CARET             &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp ESC    &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT             &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &ae           &kp RA(S)     &oe            &ue            &kp LS(LA(NUMBER_2))  &kp MINUS  &kp EQUAL      &kp BSLH         &kp LBKT  &kp RBKT  &kp RETURN
-&kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)  &trans                &kp UNDER             &kp PLUS       &kp PIPE         &kp LBRC  &kp RBRC  &kp TILDE
-                                       &trans         &kp LEFT_GUI   &kp LG(BACKSPACE)     &kp SPACE             &kp RIGHT_ALT  &trans
+&kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)  &trans                &kp UNDER  &kp PLUS       &kp PIPE         &kp LBRC  &kp RBRC  &kp TILDE
+                                       &trans         &kp LEFT_GUI   &kp LG(BACKSPACE)     &kp SPACE  &kp RIGHT_ALT  &trans
             >;
         };
 
-        Funct_layer {
+        funct_layer {
             label = "Funct";
             bindings = <
 &kp RC(F1)  &trans        &trans        &trans        &trans        &trans        &trans  &trans            &kp LA(LC(U))  &kp LA(LC(I))  &trans             &trans
@@ -111,6 +126,17 @@
 &trans      &trans        &trans        &kp C_VOL_DN  &kp C_VOL_UP  &trans        &trans  &trans            &trans         &trans         &trans             &trans
                                         &trans        &trans        &trans        &trans  &trans            &trans
             >;
+        };
+
+        arc_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Arc";
         };
     };
 };
