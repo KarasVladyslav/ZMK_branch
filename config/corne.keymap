@@ -19,16 +19,16 @@
 
 / {
     behaviors {
-        td2: tap_dance_2 {
+        lslc: lslc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
+            label = "LSLC";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>;
         };
-        td3: tap_dance_3 {
+        rsra: rsra {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
+            label = "RSRA";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RIGHT_SHIFT>, <&kp RALT>;
@@ -77,19 +77,19 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp TAB   &kp Q  &kp W  &kp E  &kp R            &kp T               &kp Y            &kp U  &kp I      &kp O    &kp P     &kp GRAVE
-&kp LALT  &kp A  &kp S  &kp D  &kp F            &kp G               &kp H            &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&td2      &kp Z  &kp X  &kp C  &kp V            &kp B               &kp N            &kp M  &kp COMMA  &kp DOT  &kp FSLH  &td3
-                        &mo13  &mt LSHFT ENTER  &mt LGUI BACKSPACE  &lt Raise SPACE  &mo 2  &mo13
+&kp TAB   &kp Q  &kp W  &kp E  &kp R        &kp T               &kp Y        &kp U        &kp I      &kp O    &kp P     &kp GRAVE
+&kp LALT  &kp A  &kp S  &kp D  &kp F        &kp G               &kp H        &kp J        &kp K      &kp L    &kp SEMI  &kp ENTER
+&lslc     &kp Z  &kp X  &kp C  &kp V        &kp B               &kp N        &kp M        &kp COMMA  &kp DOT  &kp FSLH  &rsra
+                        &mo13  &lt 5 MINUS  &mt LGUI BACKSPACE  &lt 5 SPACE  &lt 2 ENTER  &mo13
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&kp ESC    &trans             &trans    &kp UP                    &trans                &trans         &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS         &kp DEL
-&kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT  &kp DOWN                  &kp RIGHT             &trans         &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS        &kp RETURN
-&kp LSHFT  &trans             &trans    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans         &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY  &trans
+&kp ESC    &trans             &trans    &kp UP                    &trans                &trans         &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp DEL
+&kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT  &kp DOWN                  &kp RIGHT             &trans         &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &kp RETURN
+&kp LSHFT  &trans             &trans    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans         &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp BACKSLASH  &trans
                                         &trans                    &kp LEFT_GUI          &kp BACKSPACE  &kp SPACE          &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
@@ -98,7 +98,7 @@
             label = "Raise";
             bindings = <
 &kp ESC    &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT             &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &ae           &kp RA(S)     &oe            &ue            &kp LS(LA(NUMBER_2))  &kp MINUS  &kp EQUAL      &kp BSLH         &kp LBKT  &kp RBKT  &kp RETURN
+&kp LCTRL  &ae           &kp RA(S)     &oe            &ue            &kp LS(LA(NUMBER_2))  &kp GRAVE  &kp EQUAL      &kp BSLH         &kp LBKT  &kp RBKT  &kp RETURN
 &kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)  &trans                &kp UNDER  &kp PLUS       &kp PIPE         &kp LBRC  &kp RBRC  &kp TILDE
                                        &trans         &kp LEFT_GUI   &kp LG(BACKSPACE)     &kp SPACE  &kp RIGHT_ALT  &trans
             >;
@@ -117,19 +117,19 @@
         arc_layer {
             label = "Arc";
             bindings = <
-&trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &kp LG(LS(SEMICOLON))  &trans  &trans  &kp     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LA(LS(LG(C)))  &trans                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans             &trans                 &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &kp LG(LS(SEMICOLON))  &trans  &trans  &kp LA(LG(G))  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LA(LS(LG(C)))  &trans                 &trans  &trans  &trans         &trans  &trans  &trans  &trans
+                        &trans             &trans                 &trans  &trans  &trans         &trans
             >;
         };
 
         periphery_layer {
             bindings = <
-&trans  &kp ESCAPE  &trans    &trans       &trans    &trans  &trans  &trans    &trans     &trans    &trans     &trans
-&trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans  &trans  &trans    &trans     &trans    &kp ENTER  &trans
-&trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI  &trans  &trans  &kp RGUI  &kp RCTRL  &kp RALT  &kp RSHFT  &trans
-                              &trans       &trans    &trans  &trans  &trans    &trans
+&trans  &kp ESCAPE  &trans    &trans       &trans    &trans             &trans  &trans    &trans     &trans    &trans     &trans
+&trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans             &trans  &trans    &trans     &trans    &kp ENTER  &trans
+&trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI  &trans             &trans  &kp RGUI  &kp RCTRL  &kp RALT  &kp RSHFT  &trans
+                              &trans       &trans    &kp LA(BACKSPACE)  &trans  &trans    &trans
             >;
 
             label = "Periph";
