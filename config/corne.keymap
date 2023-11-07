@@ -65,7 +65,7 @@
     combos {
         compatible = "zmk,combos";
 
-        L3 {
+        FunctSwitch {
             bindings = <&mo 4>;
             key-positions = <37 40>;
         };
@@ -125,14 +125,13 @@
         };
 
         periphery_layer {
+            label = "Periph";
             bindings = <
 &trans  &kp ESCAPE  &trans    &trans       &trans    &trans             &trans             &trans    &trans     &trans    &trans     &trans
 &trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans             &trans             &trans    &trans     &trans    &kp ENTER  &trans
 &trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI  &trans             &trans             &kp RGUI  &kp RCTRL  &kp RALT  &kp RSHFT  &trans
                               &trans       &trans    &kp LA(BACKSPACE)  &kp LG(BACKSPACE)  &trans    &trans
             >;
-
-            label = "Periph";
         };
     };
 };
