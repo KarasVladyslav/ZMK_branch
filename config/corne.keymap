@@ -87,9 +87,9 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp ESC    &trans             &trans    &kp UP                    &trans                &trans         &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp DEL
-&kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT  &kp DOWN                  &kp RIGHT             &trans         &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &kp RETURN
-&kp LSHFT  &trans             &trans    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans         &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp BACKSLASH  &trans
+&kp ESC    &trans             &trans    &kp UP                    &trans                &trans         &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
+&kp LCTRL  &kp LC(LG(SPACE))  &kp LEFT  &kp DOWN                  &kp RIGHT             &trans         &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
+&kp LSHFT  &trans             &trans    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans         &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &trans
                                         &trans                    &kp LEFT_GUI          &kp BACKSPACE  &kp SPACE          &kp RIGHT_ALT  &kp NUMBER_0
             >;
         };
@@ -98,7 +98,7 @@
             label = "Raise";
             bindings = <
 &kp ESC    &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT             &kp CARET  &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &ae           &kp RA(S)     &oe            &ue            &kp LS(LA(NUMBER_2))  &kp GRAVE  &kp EQUAL      &kp BSLH         &kp LBKT  &kp RBKT  &kp RETURN
+&kp LCTRL  &ae           &kp RA(S)     &oe            &ue            &kp LS(LA(NUMBER_2))  &kp GRAVE  &kp MINUS      &kp BSLH         &kp LBKT  &kp RBKT  &kp RETURN
 &kp LSHFT  &kp LG(LEFT)  &kp LA(LEFT)  &kp RA(RIGHT)  &kp LG(RIGHT)  &trans                &kp UNDER  &kp PLUS       &kp PIPE         &kp LBRC  &kp RBRC  &kp TILDE
                                        &trans         &kp LEFT_GUI   &kp LG(BACKSPACE)     &kp SPACE  &kp RIGHT_ALT  &trans
             >;
@@ -127,10 +127,10 @@
         periphery_layer {
             label = "Periph";
             bindings = <
-&trans  &kp ESCAPE  &trans    &trans       &trans    &trans             &trans             &trans    &trans     &trans    &trans     &trans
-&trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans    &trans         &kp LG(LS(SEMICOLON))  &kp LA(LS(LG(C)))       &kp LA(LG(G))     &kp ENTER  &trans
-&trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI  &trans             &trans             &kp RGUI  &kp RCTRL  &kp RALT  &kp RSHFT  &trans
-                              &trans       &trans    &kp LA(BACKSPACE)  &kp LG(BACKSPACE)  &trans    &trans
+&trans  &kp ESCAPE  &trans    &trans       &trans    &trans             &trans             &trans                 &trans             &trans         &trans     &trans
+&trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans             &trans             &kp LG(LS(SEMICOLON))  &kp LA(LS(LG(C)))  &kp LA(LG(G))  &kp ENTER  &trans
+&trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI  &trans             &trans             &kp RGUI               &kp RCTRL          &kp RALT       &kp RSHFT  &trans
+                              &trans       &trans    &kp LA(BACKSPACE)  &kp LG(BACKSPACE)  &trans                 &trans
             >;
         };
     };
