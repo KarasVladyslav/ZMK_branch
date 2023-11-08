@@ -66,7 +66,7 @@
         compatible = "zmk,combos";
 
         FunctSwitch {
-            bindings = <&mo 4>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <37 40>;
         };
     };
@@ -80,7 +80,7 @@
 &kp TAB   &kp Q  &kp W  &kp E  &kp R               &kp T            &kp Y        &kp U  &kp I      &kp O    &kp P     &kp GRAVE
 &kp LALT  &kp A  &kp S  &kp D  &kp F               &kp G            &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
 &lslc     &kp Z  &kp X  &kp C  &kp V               &kp B            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &rsra
-                        &mo13  &mt LEFT_GUI MINUS  &lt 5 BACKSPACE  &lt 5 SPACE  &mo 2  &mo13
+                        &mo13  &mt LEFT_GUI MINUS  &lt 4 BACKSPACE  &lt 4 SPACE  &mo 2  &mo13
             >;
         };
 
@@ -114,18 +114,8 @@
             >;
         };
 
-        arc_layer {
-            label = "Arc";
-            bindings = <
-&trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans         &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans             &kp LG(LS(SEMICOLON))  &trans  &trans  &kp LA(LG(G))  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LA(LS(LG(C)))  &trans                 &trans  &trans  &trans         &trans  &trans  &trans  &trans
-                        &trans             &trans                 &trans  &trans  &trans         &trans
-            >;
-        };
-
-        periphery_layer {
-            label = "Periph";
+        handy_layer {
+            label = "Shots";
             bindings = <
 &trans  &kp ESCAPE  &trans    &trans       &trans    &trans             &trans             &trans                 &trans             &trans         &trans     &trans
 &trans  &trans      &trans    &kp LS(TAB)  &kp TAB   &trans             &trans             &kp LG(LS(SEMICOLON))  &kp LA(LS(LG(C)))  &kp LA(LG(G))  &kp ENTER  &trans
