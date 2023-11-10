@@ -118,7 +118,7 @@
             label = "Shots";
             bindings = <
 &trans  &kp ESCAPE  &trans    &trans       &trans             &trans             &trans             &trans                 &trans             &trans         &trans     &trans
-&trans  &trans      &trans    &kp LS(TAB)  &kp TAB            &trans             &kp LS(LG(LA(K)))  &kp LG(LS(SEMICOLON))  &kp LA(LS(LG(C)))  &kp LA(LG(G))  &kp ENTER  &trans
+&trans  &trans      &trans    &kp LS(TAB)  &kp TAB            &kp LG(TAB)        &kp LS(LG(LA(K)))  &kp LG(LS(SEMICOLON))  &kp LA(LS(LG(C)))  &kp LA(LG(G))  &kp ENTER  &trans
 &trans  &kp LSHFT   &kp LALT  &kp LCTRL    &kp LGUI           &trans             &trans             &kp RGUI               &kp RCTRL          &kp RALT       &kp RSHFT  &trans
                               &trans       &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &trans             &trans                 &trans
             >;
