@@ -108,7 +108,7 @@
             >;
         };
 
-        funct_layer {
+        funct_layer { //bluetooth and magnet shortcuts
             label = "Funct";
             bindings = <
 &kp RC(F1)  &trans        &trans        &trans        &trans        &trans        &trans         &trans            &kp LA(LC(U))  &kp LA(LC(I))  &trans             &trans
@@ -118,7 +118,7 @@
             >;
         };
 
-        handy_layer {
+        handy_layer { // arc browser shortcuts + misc
             label = "Shots";
             bindings = <
 &trans  &kp ESCAPE  &trans    &trans       &trans             &trans             &trans             &trans                 &trans             &trans         &trans     &trans
