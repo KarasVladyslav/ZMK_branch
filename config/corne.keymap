@@ -16,6 +16,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -81,10 +82,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp TAB   &kp Q  &kp W  &kp E  &kp R               &kp T            &kp Y        &kp U  &kp I      &kp O    &kp P     &kp GRAVE
-&kp LALT  &kp A  &kp S  &kp D  &kp F               &kp G            &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&lslc     &kp Z  &kp X  &kp C  &kp V               &kp B            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &rsra
-                        &mo13  &mt LEFT_GUI MINUS  &lt 3 BACKSPACE  &lt 4 SPACE  &mo 2  &mo13
+&kp TAB   &kp Q            &kp W  &kp E  &kp R               &kp T            &kp Y        &kp U  &kp I      &kp O    &kp P     &kp GRAVE
+&kp LALT  &kp A            &kp S  &kp D  &kp F               &kp G            &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&lslc     &rgb_ug RGB_TOG  &kp X  &kp C  &kp V               &kp B            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &rsra
+                                  &mo13  &mt LEFT_GUI MINUS  &lt 3 BACKSPACE  &lt 4 SPACE  &mo 2  &mo13
             >;
         };
 
@@ -108,7 +109,7 @@
             >;
         };
 
-        funct_layer { //bluetooth and magnet shortcuts
+        funct_layer {
             label = "Funct";
             bindings = <
 &kp RC(F1)  &trans        &trans        &trans        &trans        &trans        &trans         &trans            &kp LA(LC(U))  &kp LA(LC(I))  &trans             &trans
@@ -118,7 +119,7 @@
             >;
         };
 
-        handy_layer { // arc browser shortcuts + misc
+        handy_layer {
             label = "Shots";
             bindings = <
 &trans  &kp ESCAPE  &trans    &trans       &trans             &trans             &trans             &trans                 &trans             &trans         &trans     &trans
