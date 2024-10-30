@@ -86,20 +86,20 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T                   &kp Y      &kp U  &kp I      &kp O    &kp P     &kp RIGHT_BRACKET
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F  &kp G                   &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V  &kp B                   &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSPACE
-                                &kp LEFT_ALT  &mo 1  &mt LEFT_COMMAND SPACE  &kp SPACE  &mo 2  &mo13
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T                   &kp Y         &kp U  &kp I         &kp O    &kp P     &kp RIGHT_BRACKET
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F  &kp G                   &kp H         &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V  &kp B                   &kp N         &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                                &kp LEFT_ALT  &mo 1  &mt LEFT_COMMAND SPACE  &kp NUMBER_1  &mo 2  &kp NUMBER_3
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&kp ESC  &kp LS(LA(KP_NUMBER_1))  &kp LS(LA(KP_NUMBER_2))  &kp LS(LA(KP_NUMBER_3))  &trans           &trans  &kp APOSTROPHE     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
-&trans   &trans                   &trans                   &kp UP_ARROW             &trans           &trans  &kp DOUBLE_QUOTES  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
-&trans   &trans                   &kp LEFT_ARROW           &kp DOWN_ARROW           &kp RIGHT_ARROW  &trans  &trans             &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &trans
-                                                           &trans                   &kp LEFT_GUI     &to 0   &kp SPACE          &kp RIGHT_ALT  &kp NUMBER_0
+&kp ESC  &kp LC(KP_NUMBER_1)  &kp LC(KP_NUMBER_2)  &kp LC(KP_NUMBER_3)  &trans           &trans  &kp APOSTROPHE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
+&trans   &trans               &trans               &kp UP_ARROW         &trans           &trans  &kp DOUBLE_QUOTES  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
+&trans   &trans               &kp LEFT_ARROW       &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &trans
+                                                   &trans               &none            &none   &none              &none         &kp NUMBER_0
             >;
         };
 
