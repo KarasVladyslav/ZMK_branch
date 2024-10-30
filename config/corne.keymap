@@ -73,6 +73,11 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <37 40>;
         };
+
+        EngCombo {
+            bindings = <&kp LS(LA(KP_NUMBER_1))>;
+            key-positions = <1 38>;
+        };
     };
 
     keymap {
