@@ -96,10 +96,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp ESC  &kp LC(KP_NUMBER_1)  &kp LC(KP_NUMBER_2)  &kp LC(KP_NUMBER_3)  &trans           &trans  &kp APOSTROPHE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
-&trans   &trans               &trans               &kp UP_ARROW         &trans           &trans  &kp DOUBLE_QUOTES  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
-&trans   &trans               &kp LEFT_ARROW       &kp DOWN_ARROW       &kp RIGHT_ARROW  &trans  &trans             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &trans
-                                                   &trans               &none            &none   &none              &none         &kp NUMBER_0
+&kp ESC  &trans  &trans          &trans          &trans           &trans  &kp APOSTROPHE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp DEL
+&trans   &trans  &trans          &kp UP_ARROW    &trans           &trans  &kp DOUBLE_QUOTES  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp RETURN
+&trans   &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &trans
+                                 &trans          &none            &none   &none              &none         &kp NUMBER_0
             >;
         };
 
