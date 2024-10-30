@@ -43,42 +43,7 @@
         };
     };
 
-    macros {
-        ae: ae {
-            compatible = "zmk,behavior-macro";
-            label = "AE";
-            #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp A>;
-        };
-
-        oe: oe {
-            compatible = "zmk,behavior-macro";
-            label = "OE";
-            #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp O>;
-        };
-
-        ue: ue {
-            compatible = "zmk,behavior-macro";
-            label = "UE";
-            #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp U>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        FunctSwitch {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <37 40>;
-        };
-
-        EngCombo {
-            bindings = <&kp LS(LA(KP_NUMBER_1))>;
-            key-positions = <1 38>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
